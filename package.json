@@ -1,0 +1,26 @@
+{
+  "name": "personalserviceapp",
+  "version": "1.0.0",
+  "description": "Presence Service App like Google Doc, using socket and  express ",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "yarn run test",
+    "start": "nodemon server/server.js"
+  },
+  "keywords": [
+    "Node",
+    "js",
+    "Express",
+    "Socket.js"
+  ],
+  "author": "shrey vijayvargiya",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.8.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "sass": "^1.26.3",
+    "socket.io": "^2.3.0",
+    "underscore": "^1.10.2"
+  }
+}

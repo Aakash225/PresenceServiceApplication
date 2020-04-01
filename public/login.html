@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<hml>
+	<head>
+		<title>Register</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="form" >
+			<label>Username:</label>
+			<input name="username" id="username" type="text" /><br />
+			<label>Password:</label>
+			<input name="password" id="password" type="password" /><br />
+			<button class="btn btn-success" onclick="handleSubmit()">Login</button>
+		</div>
+	</body>
+	<script>
+		const data = window.localStorage.getItem('userData');
+		if(!JSON.parse(data).username){
+			alert('Please Register First');
+			window.location.href = './register.html';
+		};
+		document.querySelector('#username').value = JSON.parse(data).username;
+		function handleSubmit() {
+			const name = document.querySelector('#username').value;
+			const pass = document.querySelector('#password').value;
+			const iscorrectPassword = (pass === JSON.parse(data).password);
+			const isCorrectUsername = name === JSON.parse(data).username;
+			if(!pass || !name){
+				alert('Username and Password required');
+				return
+			};
+			if(!isCorrectUsername){
+				alert('Not a User, Please Register');
+				window.location.href = './index.html';
+				return 
+			}
+			if(!iscorrectPassword || !isCorrectUsername){
+				alert('Please enter correct password or username');
+				return 
+			};
+			window.location.href = `./doc.html?username=${name}`;
+		};
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+</hml>
