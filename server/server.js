@@ -3,6 +3,7 @@ const http = require('http');
 const socketIO = require('socket.io');
 const  { addUser, removeUser, getUsers, getUserById} = require('./utils/user');
 const _ = require('underscore');
+const port = process.env.PORT || 3000;
 
 const app = express();
 const server = http.createServer(app);
@@ -23,4 +24,4 @@ io.on('connection', (socket) => {
 	}); 
 });
 
-server.listen(3000, () => console.log('Server is running on 3000 port '));
+server.listen( port, () => console.log('Server is running on 3000 port '));
