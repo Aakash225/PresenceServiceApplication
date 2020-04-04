@@ -4,6 +4,7 @@ const socketIO = require('socket.io');
 const  { addUser, removeUser, getUsers, getUserById} = require('./utils/user');
 const _ = require('underscore');
 const port = process.env.PORT || 3000;
+const path = require('path');
 
 const app = express();
 const server = http.createServer(app);
