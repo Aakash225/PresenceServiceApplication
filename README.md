@@ -6,7 +6,10 @@
 3. Login using the above username and password 
 4. You can view the Doc.html page where whosoever is using the link can be seen with their respective username.
 
-##Technologies Users! 
+##Demo
+[<img src="./public/assets/PresenceServiceDemo.mp4" width="50%">]
+
+##Technologies Used! 
 1. HTML, CSS and Javascript
 2. Express
 3. Socket.io
