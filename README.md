@@ -7,13 +7,14 @@
 4. You can view the Doc.html page where whosoever is using the link can be seen with their respective username.
 
 ##Demo
-1.Register Page => 
+
+1.Register Page 
 [<img src="./public/assets/Register.png" width="50%">]
 
-2.Login Page => 
+2.Login Page
 [<img src="./public/assets/Login.png" width="50%">]
 
-3. Doc Page => 
+3. Doc Page
 [<img src="./public/assets/Doc.png" width="50%">]
 
 
